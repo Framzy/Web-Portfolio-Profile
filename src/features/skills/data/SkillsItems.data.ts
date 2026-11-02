@@ -1,5 +1,6 @@
-export const SKILLS_ITEMS: { label: string; span: number; items: string[] }[] =
-  [
+import type { SkillItem } from "../types";
+
+export const SKILLS_ITEMS: SkillItem[] = [
     {
       label: "Programming languages",
       span: 2,

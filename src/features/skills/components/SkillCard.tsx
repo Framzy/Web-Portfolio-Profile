@@ -1,14 +1,10 @@
-type skill = {
-  label: string;
-  span: number;
-  items: string[];
-};
+import type { SkillItem } from "../types";
 
-type Props = skill & {
+type SkillCardProps = SkillItem & {
   index: number;
 };
 
-export default function SkillCard({ index, label, span, items }: Props) {
+export default function SkillCard({ index, label, span, items }: SkillCardProps) {
   const spanClass = span === 2 ? "col-span-2 " : "col-span-2 md:col-span-1 ";
 
   return (
