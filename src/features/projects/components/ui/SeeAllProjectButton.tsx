@@ -1,10 +1,14 @@
+import type { ProjectsView } from "../../types";
+
+type SeeAllProjectButtonProps = {
+  view: ProjectsView;
+  toggleView: () => void;
+};
+
 export default function SeeAllProjectButton({
   view,
   toggleView,
-}: {
-  view: string;
-  toggleView: () => void;
-}) {
+}: SeeAllProjectButtonProps) {
   return (
     <button
       type="button"
