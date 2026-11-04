@@ -77,15 +77,19 @@
 }
 
 /* Project */
-.custom-pagination {
-  gap: 0px !important;
+.swiper-pagination {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin: 20px 0 !important;
 }
-.custom-pagination .swiper-pagination-bullet {
+
+.swiper-pagination .swiper-pagination-bullet {
   background: black !important;
   border: 2px solid #8a8a8a !important;
 }
 
-.custom-pagination .swiper-pagination-bullet-active {
+.swiper-pagination .swiper-pagination-bullet-active {
   background: #39edf9 !important;
   border: none !important;
 }
