@@ -42,8 +42,9 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
     >
       <div className="left-slide-content">
         <button
-          title="prevButton"
-          className="cursor-pointer"
+          type="button"
+          aria-label="Previous projects"
+          className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           <FaArrowLeftLong size={20} className="text-white" />
@@ -87,8 +88,9 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
 
       <div className="right-slide-content">
         <button
-          title="nextButton"
-          className="cursor-pointer"
+          type="button"
+          aria-label="Next projects"
+          className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
           onClick={() => swiperRef.current?.slideNext()}
         >
           <FaArrowRightLong size={20} className="text-white" />
