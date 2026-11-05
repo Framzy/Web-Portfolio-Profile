@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import type { Swiper as SwiperType } from "swiper";
 import type { ProjectItem } from "../types";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
@@ -21,6 +21,9 @@ function chunk<T>(arr: T[], size = 2): T[][] {
 
 export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
   const swiperRef = useRef<SwiperType | null>(null);
+  const [prefersReducedMotion] = useState(
+    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
 
   const projectsToShow = projects.filter((project) => project.isFeatured);
 
@@ -60,12 +63,16 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          loop={true}
+          autoplay={
+            slides.length > 1 && !prefersReducedMotion
+              ? {
+                  delay: 5000,
+                  disableOnInteraction: true,
+                  pauseOnMouseEnter: true,
+                }
+              : false
+          }
+          loop={slides.length > 1}
         >
           {slides.map((pair) => (
             <SwiperSlide key={pair[0].project.id}>
