@@ -100,3 +100,9 @@
 .connect-section {
   z-index: 5;
 }
+
+/* Project Detail Modal */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
