@@ -5,15 +5,21 @@ import ProjectsSwiper from "./ProjectSwiper";
 type ProjectsLayoutProps = {
   view: ProjectsView;
   projects: ProjectItem[];
+  onSelectProject: (project: ProjectItem) => void;
 };
 
 export default function ProjectsLayoyut({
   view,
   projects,
+  onSelectProject,
 }: ProjectsLayoutProps) {
   if (view === "grid") {
-    return <ProjectGrid projects={projects} />;
+    return (
+      <ProjectGrid projects={projects} onSelectProject={onSelectProject} />
+    );
   }
 
-  return <ProjectsSwiper projects={projects} />;
+  return (
+    <ProjectsSwiper projects={projects} onSelectProject={onSelectProject} />
+  );
 }

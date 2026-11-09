@@ -1,15 +1,21 @@
 import { motion } from "framer-motion";
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { fadeInTop } from "../../utils/motionVariants.ts";
 
 import { useProjectsView } from "./hooks/useProjectsView";
 import { PROJECTS_ITEMS } from "./data/ProjectItems.data";
 import ProjectsLayout from "./layouts/ProjectsLayout";
 import SeeAllProjectButton from "./components/ui/SeeAllProjectButton";
+import { ProjectDetailModal } from "./components/layout/ProjectDetailModal";
+import type { ProjectItem } from "./types";
 
 const ProjectSection = forwardRef<HTMLDivElement>(
   function ProjectSection(_, ref) {
     const { view, toggleView } = useProjectsView();
+    const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
+      null,
+    );
+
     return (
       <>
         <section ref={ref} className="projects-content pt-16">
@@ -23,11 +29,20 @@ const ProjectSection = forwardRef<HTMLDivElement>(
               </p>
             </div>
             <div className="w-8/10 mx-auto flex justify-center flex-col items-center">
-              <ProjectsLayout view={view} projects={PROJECTS_ITEMS} />
+              <ProjectsLayout
+                view={view}
+                projects={PROJECTS_ITEMS}
+                onSelectProject={setSelectedProject}
+              />
               <SeeAllProjectButton view={view} toggleView={toggleView} />
             </div>
           </motion.div>
         </section>
+
+        <ProjectDetailModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
       </>
     );
   },
