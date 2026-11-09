@@ -34,7 +34,9 @@ export default function ConnectDesktop({ openConnect }: Props) {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white font-medium underline underline-offset-2 hover:text-[#39EEFA]"
+                className="text-white font-medium underline underline-offset-2 hover:text-[#39EEFA]
+                  focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400
+                  transition-colors duration-100 delay-75 ease-in-out"
               >
                 {item.label}
                 <FaArrowUp className="inline-block rotate-45 ml-1" size={12} />
