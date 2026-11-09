@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 
 type ProjectsSwiperProps = {
   projects: ProjectItem[];
+  onSelectProject: (project: ProjectItem) => void;
 };
 
 function chunk<T>(arr: T[], size = 2): T[][] {
@@ -19,7 +20,10 @@ function chunk<T>(arr: T[], size = 2): T[][] {
   return out;
 }
 
-export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
+export default function ProjectsSwiper({
+  projects,
+  onSelectProject,
+}: ProjectsSwiperProps) {
   const swiperRef = useRef<SwiperType | null>(null);
   const [prefersReducedMotion] = useState(
     () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
@@ -85,6 +89,7 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
                     key={project.id}
                     project={project}
                     number={number}
+                    onSelectProject={onSelectProject}
                   />
                 ))}
               </div>
