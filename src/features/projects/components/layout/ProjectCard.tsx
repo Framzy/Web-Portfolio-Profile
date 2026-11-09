@@ -1,4 +1,6 @@
 import type { ProjectItem } from "../../types";
+import { ViewProjectButton } from "../ui/ViewProjectButton";
+import { TechBadgesProject } from "../ui/TechBadgesProject";
 
 type Props = {
   project: ProjectItem;
@@ -20,17 +22,12 @@ export function ProjectCard({ project, number, onSelectProject }: Props) {
               src={project.thumbnail}
               alt={project.title}
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out"
             />
-            <button
-              type="button"
-              onClick={() => onSelectProject(project)}
-              className="absolute bottom-2 right-2 px-4 py-2 rounded-sm border border-white bg-black/75 text-white 
-                     hover:bg-white/60 hover:text-black 
-                     transition-all duration-150 cursor-pointer inline-flex items-center gap-1 font-manrope text-sm"
-            >
-              <span>View Details</span>
-            </button>
+            <ViewProjectButton
+              project={project}
+              onSelectProject={onSelectProject}
+            />
           </div>
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-[#1b546f]">
@@ -45,19 +42,7 @@ export function ProjectCard({ project, number, onSelectProject }: Props) {
 
       <div className="min-h-5">
         {project.techBadges && project.techBadges.length > 0 ? (
-          <div
-            className="flex flex-wrap gap-1.5"
-            aria-label="Technologies used"
-          >
-            {project.techBadges.map((badge) => (
-              <span
-                key={badge}
-                className="text-[11px] px-2 py-0.5 rounded bg-[#353438] text-neutral-300 font-mono"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
+          <TechBadgesProject project={project} />
         ) : (
           <p className="text-[11px] px-2 py-0.5 w-fit rounded bg-[#353438] text-neutral-300 font-mono">
             No technologies listed yet.
