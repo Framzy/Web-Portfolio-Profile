@@ -4,9 +4,13 @@ import type { ProjectItem } from "../types";
 
 type ProjectsGridProps = {
   projects: ProjectItem[];
+  onSelectProject: (project: ProjectItem) => void;
 };
 
-export default function ProjectsGrid({ projects }: ProjectsGridProps) {
+export default function ProjectsGrid({
+  projects,
+  onSelectProject,
+}: ProjectsGridProps) {
   if (!projects.length) return null;
 
   return (
@@ -21,7 +25,11 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
           key={project.id}
           className="border border-white px-6 py-4 text-white"
         >
-          <ProjectCard project={project} number={index + 1} />
+          <ProjectCard
+            project={project}
+            number={index + 1}
+            onSelectProject={onSelectProject}
+          />
         </div>
       ))}
     </motion.div>
