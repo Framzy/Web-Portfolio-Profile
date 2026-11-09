@@ -58,7 +58,7 @@ export default function AboutTop({ onNavigate }: Props) {
               <span className="text-white">I’M FARDEN RAMZY MUHARRAM</span>
             </p>
             <PersonalDescription />
-            <div className="flex flex-row justify-start gap-5 mt-5 text-xs lg:text-sm">
+            <div className="box-border flex flex-row justify-start gap-5 mt-5 text-xs lg:text-sm">
               <ContactMeButton />
               <SeeProjectButton onToProject={onToProject} />
             </div>

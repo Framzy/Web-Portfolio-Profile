@@ -8,7 +8,8 @@ export default function SeeProjectButton({ onToProject }: Props) {
     <button
       type="button"
       className="bg-[#0A090F] text-white flex flex-row items-center gap-1 h-fit border border-white py-2 px-2 lg:px-4
-                 rounded box-border cursor-pointer 
+                focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 
+                rounded box-border cursor-pointer 
                 transition-all duration-300 ease-in-out hover:transform hover:-skew-x-8"
       onClick={onToProject}
     >

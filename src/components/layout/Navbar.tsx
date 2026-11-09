@@ -88,7 +88,8 @@ export default function Navbar({ onNavigate }: Props) {
             <li key={item.section}>
               <button
                 type="button"
-                className="navbar-navItem transition-colors duration-100 delay-75 ease-in-out"
+                className="navbar-navItem transition-colors duration-100 delay-75 ease-in-out
+                          focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
                 onClick={() => handleNavigate(item.section)}
               >
                 {item.label}
@@ -100,7 +101,8 @@ export default function Navbar({ onNavigate }: Props) {
             <button
               type="button"
               onClick={toggleConnect}
-              className={`transition-colors duration-100 delay-75 ease-in-out 
+              className={`focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400
+                transition-colors duration-100 delay-75 ease-in-out 
                 navbar-navItem flex items-center ${
                   openConnect ? "text-[#39EEFA]" : ""
                 }`}

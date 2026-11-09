@@ -1,13 +1,13 @@
 import { Link } from "react-router";
-import Lottie from "lottie-react";
+import { LottieLight } from "lottie-react";
 import animation404 from "../assets/lotties/404.json";
 
 export default function ErrorPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
-      <Lottie
+      <LottieLight
         className="w-5/6 sm:w-4/6 md:w-lg xl:w-2xl"
-        animationData={animation404}
+        src={animation404}
         loop
         autoplay
       />

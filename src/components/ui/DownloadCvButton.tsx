@@ -17,7 +17,8 @@ export default function DownloadCvButton({ cvFile }: Props) {
         <a
           href={cvFile.href}
           download={cvFile.fileName}
-          className="flex items-center justify-center h-full w-full"
+          className="flex items-center justify-center h-full w-full
+          focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
         >
           DOWNLOAD CV
         </a>

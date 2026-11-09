@@ -84,6 +84,7 @@ export function ProjectDetailModal({
       onCancel={handleCancel}
       onClose={handleNativeClose}
       aria-labelledby={project ? "project-modal-title" : undefined}
+      aria-describedby={project ? "project-modal-description" : undefined}
       aria-modal="true"
       className="fixed inset-0 m-auto w-11/12 max-w-4xl max-h-[80dvh] rounded-2xl bg-[#0a090f] text-white border border-[#353438] p-0 shadow-2xl overflow-hidden flex flex-col [&:not([open])]:hidden"
     >
@@ -143,7 +144,10 @@ export function ProjectDetailModal({
                   Overview
                 </h3>
                 {project.description ? (
-                  <p className="text-sm text-neutral-300 leading-relaxed font-manrope">
+                  <p
+                    id="project-modal-description"
+                    className="text-sm text-neutral-300 leading-relaxed font-manrope"
+                  >
                     {project.description}
                   </p>
                 ) : (
