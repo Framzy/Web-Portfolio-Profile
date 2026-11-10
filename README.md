@@ -4,9 +4,9 @@ A personal portfolio website built to showcase my profile, technical skills, and
 
 The website serves as a central place to explore my background, technologies I work with, and projects I have developed.
 
-## Live Website
+## Overview
 
-**Currently viewing this website.**
+![Thumbnail](docs/screenshots/Thumbnail.webp)
 
 ## Features
 
