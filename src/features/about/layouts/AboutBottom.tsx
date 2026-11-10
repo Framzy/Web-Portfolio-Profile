@@ -39,7 +39,9 @@ export default function AboutBottom({ ICONS }: Props) {
               University Indraprasta PGRI{" "}
               <span className="text-zinc-400">(2021-2025)</span>
             </p>
-            <p className="text-zinc-400 text-sm">Computer Science</p>
+            <p className="text-zinc-400 text-sm">
+              Computer Science - IPK 3.75/4.0
+            </p>
           </div>
         </div>
         {/* Experience */}
@@ -59,12 +61,6 @@ export default function AboutBottom({ ICONS }: Props) {
                 Internship{" "}
                 <span className="text-zinc-400">
                   (2024) | SMK 28 OKTOBER.II
-                </span>
-              </li>
-              <li className="text-white text-sm">
-                TOEFL EPT{" "}
-                <span className="text-zinc-400">
-                  (2025) | Daily Bahasa Inggris - 557
                 </span>
               </li>
             </ul>
