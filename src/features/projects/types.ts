@@ -13,3 +13,8 @@ export type ProjectItem = {
 };
 
 export type ProjectsView = "grid" | "swiper";
+
+export type TechConfig = {
+  backgroundColor: string;
+  textColor: string;
+};
