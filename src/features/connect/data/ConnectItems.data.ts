@@ -3,7 +3,7 @@ import type { ConnectItem } from "../types";
 export const CONNECT_ITEMS: ConnectItem[] = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/farden-ramzy-muharram-2a1230384/?locale=in",
+    href: "https://www.linkedin.com/in/farden-ramzy-muharram",
     desc: "Connect with me on LinkedIn to see my experience and what I’ve been working on.",
   },
   {
