@@ -1,7 +1,7 @@
 import type { ProjectItem } from "../types";
 import thumbnail01 from "../../../assets/projects/images/thumbnails/thumbnail_project_portfolio_profile.webp";
 import thumbnail02 from "../../../assets/projects/images/thumbnails/thumbnail_project_contact_management.webp";
-import thumbnail03 from "../../../assets/projects/images/thumbnails/thumbnail_project_kedai_takjil_test.webp";
+import thumbnail03 from "../../../assets/projects/images/thumbnails/thumbnail_project_kedai_takjil.webp";
 import thumbnail04 from "../../../assets/projects/images/thumbnails/thumbnail_project_valorant_comp_analyzer.webp";
 import thumbnail05 from "../../../assets/projects/images/thumbnails/thumbnail_project_tic_tac_toe.webp";
 import thumbnail06 from "../../../assets/projects/images/thumbnails/thumbnail_project_posyandu_app.webp";
