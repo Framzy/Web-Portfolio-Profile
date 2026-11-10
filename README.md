@@ -102,6 +102,6 @@ src/
 
 **Framzy**
 
-- GitHub: YOUR_GITHUB_PROFILE_URL
-- LinkedIn: YOUR_LINKEDIN_URL
-- Instagram: YOUR_INSTAGRAM_URL
+- GitHub: [Github](https://github.com/Framzy)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/farden-ramzy-muharram)
+- Instagram: [Instagram](https://www.instagram.com/framzy23_/)
