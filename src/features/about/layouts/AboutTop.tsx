@@ -35,11 +35,11 @@ export default function AboutTop({ onNavigate }: Props) {
         </div>
       </motion.div>
 
-      <div className="flex flex-col w-5/6 md:w-4/5 mx-auto box-border py-10">
+      <div className="flex flex-col w-5/6 md:w-4/6 mx-auto box-border py-10">
         <div className="flex flex-col md:flex-row justify-center box-border gap-6 md:gap-0">
           <motion.div
             {...fadeInRight}
-            className="w-full md:w-1/2 flex items-start justify-center px-10 md:px-4 xl:px-16 "
+            className="w-full md:w-1/2 flex items-start justify-center px-10 md:px-4 xl:px-16"
           >
             <div className="w-4/5 md:w-full max-w-100">
               <ProfileImage />
