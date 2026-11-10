@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import type { ProjectItem } from "../../types";
+import { TechBadgesProject } from "../ui/TechBadgesProject";
 
 type ProjectDetailModalProps = {
   project: ProjectItem | null;
@@ -163,16 +164,7 @@ export function ProjectDetailModal({
                   Technology Stack
                 </h3>
                 {project.techBadges && project.techBadges.length > 0 ? (
-                  <div className="flex flex-wrap gap-2">
-                    {project.techBadges.map((badge) => (
-                      <span
-                        key={badge}
-                        className="text-xs px-2.5 py-1 rounded bg-[#353438] text-neutral-200 font-mono"
-                      >
-                        {badge}
-                      </span>
-                    ))}
-                  </div>
+                  <TechBadgesProject project={project} />
                 ) : (
                   <p className="text-sm text-neutral-500 italic font-manrope">
                     No technology stack listed yet.
