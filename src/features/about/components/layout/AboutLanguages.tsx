@@ -8,12 +8,16 @@ export default function AboutLanguages() {
     >
       <p className="">{item.label}</p>
       <div className="flex flex-row items-center gap-1">
-        <div className="w-30 h-3 rounded-2xl border border-zinc-400">
+        <div
+          aria-hidden="true"
+          className="w-30 h-3 rounded-2xl border border-zinc-400"
+        >
           <div
-            className={` ${item.width} h-full rounded-2xl bg-[#39EEFA]`}
-          ></div>
+            style={{ width: `${item.percentage}%` }}
+            className={`h-full rounded-2xl bg-[#39EEFA]`}
+          />
         </div>
-        <p className="text-zinc-400 text-xs">{item.persen}</p>
+        <p className="text-zinc-400 text-xs">{item.percentage}%</p>
       </div>
     </div>
   ));

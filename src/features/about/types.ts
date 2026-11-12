@@ -6,8 +6,7 @@ export type HobbiesItem = {
 
 export type LanguagesItem = {
   label: string;
-  persen: string;
-  width: string;
+  percentage: number;
 };
 
 export type AboutBottomIcon = {
