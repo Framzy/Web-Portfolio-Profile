@@ -25,8 +25,8 @@ export const HOBBIES_ITEMS: HobbiesItem[] = [
 ];
 
 export const LANGUAGES_ITEMS: LanguagesItem[] = [
-  { label: "Indonesia", persen: "90%", width: "w-27" },
-  { label: "English", persen: "70%", width: "w-23" },
+  { label: "Indonesia", percentage: 90 },
+  { label: "English", percentage: 70 },
 ];
 
 export const ABOUT_BOTTOM_ICONS: AboutBottomIcon[] = [
